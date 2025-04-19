@@ -1,0 +1,48 @@
+SERVER HEALTH LOGS
+
+(env) ubuntu@ip-172-31-45-45:~/project/bash_scripts$ cat /var/log/server_health.log 
+2025-04-19 00:48:28 Starting health check...
+2025-04-19 00:48:28 CPU usage: 4.8%
+2025-04-19 00:48:28 Memory usage: 56.8523%
+2025-04-19 00:48:28 Disk usage: 46%
+2025-04-19 00:48:28 nginx is running.
+2025-04-19 00:48:28 API endpoint http://13.61.100.109/api/students/ is UP.
+2025-04-19 00:48:28 API endpoint http://13.61.100.109/api/subjects/ is UP.
+2025-04-19 00:48:28 Health check complete.
+(env) ubuntu@ip-172-31-45-45:~/project/bash_scripts$ 
+
+
+UPDATE SERVER LOGS
+(env) ubuntu@ip-172-31-45-45:~/project/bash_scripts$ cat /var/log/update.log 
+[2025-04-19 00:50:30] Starting system and project update...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Calculating upgrade...
+The following NEW packages will be installed:
+  linux-aws-headers-6.8.0-1027 linux-aws-tools-6.8.0-1027
+  linux-headers-6.8.0-1027-aws linux-image-6.8.0-1027-aws
+  linux-modules-6.8.0-1027-aws linux-tools-6.8.0-1027-aws
+The following packages will be upgraded:
+  apport apport-core-dump-handler cloud-init landscape-common libnss-systemd
+  libpam-systemd libplymouth5 libsystemd-shared libsystemd0 libudev1 linux-aws
+  linux-base linux-headers-aws linux-image-aws linux-libc-dev
+  linux-tools-common openssh-client openssh-server openssh-sftp-server pci.ids
+  plymouth plymouth-theme-ubuntu-text postgresql postgresql-client-common
+  postgresql-common postgresql-common-dev python3-apport
+  python3-problem-report python3-software-properties rsyslog snapd
+  software-properties-common sosreport systemd systemd-dev systemd-resolved
+  systemd-sysv udev update-notifier-common
+39 upgraded, 6 newly installed, 0 to remove and 0 not upgraded.
+Need to get 119 MB of archives.
+After this operation, 185 MB of additional disk space will be used.
+Get:1 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libnss-systemd amd64 255.4-1ubuntu8.6 [159 kB]
+Get:2 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble
+
+
+
+BACKUP
+(env) ubuntu@ip-172-31-45-45:~/project/bash_scripts$ cat ../backups/
+cp_task_backup_20250419-005517.tar.gz  cp_task_backup_20250419-005923.tar.gz  postgres_backup_20250419-005829.sql
+cp_task_backup_20250419-005829.tar.gz  postgres_backup_20250419-005517.sql    postgres_backup_20250419-005923.sql
+(env) ubuntu@ip-172-31-45-45:~/project/bash_scripts$ cat ../backups/
