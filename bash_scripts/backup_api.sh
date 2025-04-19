@@ -17,7 +17,7 @@ echo "Backing up project from $PROJECT_DIR to $BACKUP_FILE..."
 tar --exclude="$PROJECT_DIR/env" -czf "$BACKUP_FILE" -C "$(dirname "$PROJECT_DIR")" "$(basename "$PROJECT_DIR")"
 
 echo "Backing up PostgreSQL database $DB_NAME..."
-PGPASSWORD=postgres pg_dump -U "$DB_USER" -h "$DB_HOST" -p "$DB_PORT" "$DB_NAME" > "$PG_BACKUP_FILE"
+PGPASSWORD=12345 pg_dump -U "$DB_USER" -h "$DB_HOST" -p "$DB_PORT" "$DB_NAME" > "$PG_BACKUP_FILE"
 
 # === DONE ===
 echo "Backup completed!"
